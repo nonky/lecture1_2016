@@ -1,0 +1,24 @@
+#turtorial 2a
+import numpy as np
+xi=0; xf=np.pi/2; n=10
+x=np.linspace(xi,xf,n)
+
+#turtorial 2b
+Integration of cos(x) for 0 to pi/2 for range # of points using the simple mothod, include 10,30,100,300,1000 points between 0 and pi/2
+import numpy as np 
+xi = 0
+xf = np.pi/2
+delta = [(xf-xi)/10,(xf-xi)/30,(xf-xi)/100,(xf-xi)/300,(xf-xi)/1000]
+for dx in delta:|
+     x = np.arange(xi,xf,dx)
+     y = np.cos(x)
+     total = y.sum()*dx  
+     print 'integral is ' + repr(total) + ' with dx=' + repr(dx)
+
+#turtorial 2c
+
+h=range(1,25)
+odd=h[0::2]
+#even points skipping first and last point
+even=h[1::2]
+even1=even[1:-2]

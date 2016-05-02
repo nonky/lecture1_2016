@@ -1,0 +1,26 @@
+Q1
+>>listing all files in a directory with the most recent one displayed last.
+
+#using the command ls -lt -r
+nonky@nonky-Presario-CQ58-Notebook-PC:~$ ls -lt -r
+
+Q2(a)
+>>displaying first 25 lines 
+
+#using the command head -25 and then the name of the file
+nonky@nonky-Presario-CQ58-Notebook-PC:~/Documents/tasks$ head -25 gauss_fft.py
+
+Q2(b) 
+>>How can you display for 16 through 25?
+
+#by commanding:head -25 file name|tail-10
+nonky@nonky-Presario-CQ58-Notebook-PC:~/Documents/tasks$ head -25 gauss_fft.py|tail -10
+
+Q3
+>>>Sometimes there are multiple man pages with the same name. How can you display them all?
+
+#by commanding:man -k -apropos 
+nonky@nonky-Presario-CQ58-Notebook-PC:~$ man -k - apropos
+
+
+
