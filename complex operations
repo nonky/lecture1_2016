@@ -1,0 +1,32 @@
+import numpy as np
+class Complex:
+
+    def __init__(self, real, imag):
+        self.real = real
+        self.imag = imag
+
+    def __add__(self, other):
+        return Complex(self.real + other.real, self.imag + other.imag)
+    def __sub__(self, other):
+        return Complex(self.real - other.real, self.imag - other.imag)
+    def __mul__(self, other):
+        return Complex(self.real*other.real - self.imag*other.imag,
+                       self.imag*other.real + self.real*other.imag)
+    def __div__(self, other):
+        return Complex((self.real*other.real + self.imag*other.imag)/(other.real**2+other.imag**2),
+                       (self.imag*other.real-self.real*other.imag)/(other.real**2+other.imag**2))
+    def __str__(self):
+        return '(%g,%g)'%(self.real,self.imag)
+    
+z1 = Complex(3.0,4.0)
+z2 = Complex(2.0,-1.0)
+mysum = z1 + z2
+mydif = z1 - z2
+mypro = z1*z2
+myqus = z1/z2
+print  z1
+print 'complex z2 is ', z2
+print 'the sum of z1 and z2 is ', mysum
+print 'the difference of z1 and z2 is ', mydif
+print 'the product of z1 and z2 is ', mypro
+print 'the quotiont of z1 and z2 is ', myqus
